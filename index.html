@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에이언즈 엔드 랜덤 추첨</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>에이언즈 엔드 랜덤 추첨</h1>
+    </header>
+
+    <nav class="tabs" aria-label="추첨 종류">
+      <button type="button" data-tab="gems" aria-pressed="true">보석</button>
+      <button type="button" data-tab="relics" aria-pressed="false">유물</button>
+      <button type="button" data-tab="spells" aria-pressed="false">주문</button>
+      <button type="button" data-tab="heroes" aria-pressed="false">영웅</button>
+      <button type="button" data-tab="nemeses" aria-pressed="false">네메시스</button>
+    </nav>
+
+    <main>
+      <section id="gems" class="panel">
+        <h2>보석</h2>
+        <p>무작위로 3종을 뽑습니다.</p>
+        <div class="results" aria-live="polite"></div>
+        <button type="button" data-draw="gems">보석 뽑기</button>
+      </section>
+
+      <section id="relics" class="panel" hidden>
+        <h2>유물</h2>
+        <p>무작위로 2종을 뽑습니다.</p>
+        <div class="results" aria-live="polite"></div>
+        <button type="button" data-draw="relics">유물 뽑기</button>
+      </section>
+
+      <section id="spells" class="panel" hidden>
+        <h2>주문</h2>
+        <p>무작위로 4종을 뽑습니다.</p>
+        <div class="results" aria-live="polite"></div>
+        <button type="button" data-draw="spells">주문 뽑기</button>
+      </section>
+
+      <section id="heroes" class="panel" hidden>
+        <h2>영웅</h2>
+        <p>무작위로 2명을 뽑습니다.</p>
+        <div class="results" aria-live="polite"></div>
+        <button type="button" data-draw="heroes">영웅 뽑기</button>
+      </section>
+
+      <section id="nemeses" class="panel" hidden>
+        <h2>네메시스</h2>
+        <p>무작위로 1종을 뽑습니다.</p>
+        <div class="results" aria-live="polite"></div>
+        <button type="button" data-draw="nemeses">네메시스 뽑기</button>
+      </section>
+    </main>
+  </body>
+</html>
