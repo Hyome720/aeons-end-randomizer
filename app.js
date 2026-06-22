@@ -20,7 +20,7 @@ function getItemName(item) {
 }
 
 function supportsLock(category) {
-  return category !== "heroes" && category !== "nemeses";
+  return category !== "nemeses";
 }
 
 function selectRandomItems(items, count) {
