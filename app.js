@@ -48,16 +48,16 @@ function renderResults(category) {
     card.classList.toggle("has-lock", supportsLock(category));
     card.classList.toggle("is-locked", supportsLock(category) && state.locked[index]);
 
-    const name = document.createElement("strong");
-    name.textContent = getItemName(item);
-    card.append(name);
-
     if (typeof item !== "string") {
       const cost = document.createElement("span");
       cost.className = "result-cost";
       cost.textContent = `${item.cost} 에테르`;
       card.append(cost);
     }
+
+    const name = document.createElement("strong");
+    name.textContent = getItemName(item);
+    card.append(name);
 
     if (supportsLock(category)) {
       const lockLabel = document.createElement("label");

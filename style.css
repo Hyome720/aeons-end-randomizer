@@ -79,6 +79,7 @@ button:disabled {
   grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: 16px;
+  min-height: 64px;
   padding: 16px;
   border: 1px solid #39445b;
   border-radius: 12px;
@@ -86,17 +87,23 @@ button:disabled {
 }
 
 .result-card.has-lock {
-  grid-template-columns: minmax(0, 1fr) minmax(80px, 110px) 70px;
+  grid-template-columns: minmax(78px, 96px) minmax(0, 1fr) 70px;
 }
 
 .result-card > strong {
   grid-column: 1;
+  line-height: 1.35;
+}
+
+.result-card.has-lock > strong {
+  grid-column: 2;
 }
 
 .result-card .result-cost {
-  grid-column: 2;
+  grid-column: 1;
   color: #e4bd6b;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .result-card.is-locked {
